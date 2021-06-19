@@ -68,6 +68,9 @@ data['original_product_name'].value_counts()
 
 ########### remove multiple 24 #############################################
 
+###  This step is very time consuming, reduced to 10 000 records for  ##
+###    demonstation purpose #
+
 data1 = data[:10000] 
 
 
