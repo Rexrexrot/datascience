@@ -4,7 +4,7 @@
 
 ###########################################################################
 
-Please use the following script to solve data quality issues :
+Please use the following script (eon challenge final.py) to solve data quality issues :
 
 - Missing "Bundesland" information (9 percent of the records)
 - Leading zeros in postcode is missing when lenght is 4 digits
@@ -32,5 +32,8 @@ o	 Bundesland as text
 # Output files
 - eon challenge final.py     ... Python script for data cleansing
 - interview_signup_fin.csv   ... final result file
+
+# Python Script
+ eon challenge final.py
 
 ###########################################################################
