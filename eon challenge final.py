@@ -5,7 +5,11 @@ Created on  Jun 21,2021
 @author: RL
 """
 
-#import re
+###########################################################
+# Cleansing Script for Data of E.ON Energie Signups      ##
+###########################################################
+
+import re
 import pandas as pd
 #import numpy as np
 #import os
@@ -13,7 +17,6 @@ import pandas as pd
 #import seaborn as sns
 #%matplotlib inline
 import csv
-
 
 
 # read input data
@@ -27,9 +30,16 @@ data.head(10)
 data.describe()
 data.dtypes
 
+# Data description
+# original_product_name: Product the customer signed up to
+# postcode: Postcode of the customer (5 digits with 0-9)
+# bundesland: The state the customer lives
+# total_bonus: The bonus amount we provided (reduces the first year price)
+# order_date: The date that the customer ordered the product
 
+ 
 
-# check mising values
+# check missing values
 
 def draw_missing_values_table(data):
     nullCount  = data.isnull().sum().sort_values(ascending=False)
@@ -47,12 +57,36 @@ data['bundesland'].value_counts().plot(kind='bar')
 
 # bar chart Product Name
 
-data['original_product_name'].value_counts().plot(kind='bar')
+#data['original_product_name'].value_counts().plot(kind='bar')
 
 
 index = data.index
 print(len(index))
 
+
+data['original_product_name'].value_counts()
+
+########### remove multiple 24 #############################################
+
+data = data[:10000] 
+
+
+input_column = 'original_product_name'
+
+def preprocess_text(data,column):
+    #import re
+    for i in range(len(data)):
+       ######  remove multiple 24                
+                 data.loc[i,column]  = re.sub(r'\s+[ 24]+',' 24',data.loc[i,column])
+    return data
+
+data = preprocess_text(data,input_column)
+
+
+data['original_product_name'].value_counts()
+
+#########################################################################                                                               
+                                                                          
 
 # drop false product names
 
@@ -140,7 +174,7 @@ filter4.head(10)
 filter6.head(10)
 
 
-# concat
+# concat dataframes
 
 frames = [filter7, filter6, filter5, filter4]
 
@@ -208,7 +242,7 @@ result.to_csv('G:\DataScience\eon\interview_signup_fin.csv', sep = "," ,
            quoting=csv.QUOTE_NONNUMERIC,       doublequote=True,    index=False)
 
 
-
+# Finished .
 
 ###########################
 
