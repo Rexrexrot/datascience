@@ -68,7 +68,7 @@ data['original_product_name'].value_counts()
 
 ########### remove multiple 24 #############################################
 
-data = data[:10000] 
+data1 = data[:10000] 
 
 
 input_column = 'original_product_name'
@@ -80,10 +80,10 @@ def preprocess_text(data,column):
                  data.loc[i,column]  = re.sub(r'\s+[ 24]+',' 24',data.loc[i,column])
     return data
 
-data = preprocess_text(data,input_column)
+df = preprocess_text(data1,input_column)
 
 
-data['original_product_name'].value_counts()
+df['original_product_name'].value_counts()
 
 #########################################################################                                                               
                                                                           
@@ -140,12 +140,14 @@ filter6 = data.loc[data['length_pc']  == 6]
 filter5 = data.loc[data['length_pc']  == 5]
 filter4 = data.loc[data['length_pc']  == 4]
 
-
+filter10 = data.loc[data['length_pc']  == 10]
 
 filter7.head(10)
 filter6.head(10)
 filter5.head(10)
 filter4.head(10)
+
+filter10.head(10)
 
 # check row count
 
@@ -235,6 +237,11 @@ result.rename(columns={'Bundesland': 'bundesland'}, inplace=True)
 
 
 result.sort_values(by=['order_date'], inplace=True)
+
+
+
+index = data.index
+print(len(index))
 
 # save result table
 
