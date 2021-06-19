@@ -1,12 +1,15 @@
-# datascience
+#####################################################################
 
-Python Script for Data Cleansing of E.ON Signup data
+########  Python Script for Data Cleansing of E.ON Signup data  #####
+
+######################################################################
 
 Please use the following script to solve data quality issues :
 
 - Missing "Bundesland" information (9 percent of the records)
 - Leading zeros in postcode is missing when lenght is 4 digits
 - Delete ".0" in postcode
+- Delete multiple " 24" from product names
 - Drop wrong product names
 
 Input files:
@@ -30,3 +33,4 @@ Output files
 - eon challenge final.py     ... Python script for data cleansing
 - interview_signup_fin.csv   ... final result file
 
+###########################################################################
