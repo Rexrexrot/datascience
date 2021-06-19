@@ -1,13 +1,13 @@
 ##########################################################################
 
-#  Python Script for Data Cleansing of E.ON Signup data  
+#  Python Script for Data Cleansing of E.ON Signup Data  
 
 ###########################################################################
 
 # Please use the python script (eon challenge final.py) to solve data quality issues :
 
 - Missing "Bundesland" information (9 percent of the records)
-- Leading zeros in postcode is missing when lenght is 4 digits
+- Leading zero in postcode is missing when lenght is 4 digits
 - Delete ".0" in postcode
 - Delete multiple " 24" from product names
 - Drop wrong product names
@@ -32,7 +32,7 @@ o	 Bundesland as text
 # Output file  
 - interview_signup_fin.csv   ... final result file
 
-# Python Script
-- eon challenge final.py       ... Python script for data cleansing
+# Python Script for data cleansing
+- eon challenge final.py      
 
 ###########################################################################
