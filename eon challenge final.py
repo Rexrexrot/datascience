@@ -24,6 +24,7 @@ import csv
 
 data = pd.read_csv('G:\DataScience\eon\interview_signup_.csv', sep=',')
 
+#https://github.com/Rexrexrot/datascience/blob/4155adf6fb79464d63434fccf5e69a904eee9460/interview_signup_.csv
 
 data.head(10)
 
@@ -207,6 +208,10 @@ df['length_pc'].value_counts().plot(kind='bar')
 
 
 land= pd.read_csv('G:\DataScience\eon\postcode_txt.txt', header = 0, dtype = "str")
+
+
+#https://github.com/Rexrexrot/datascience/blob/4155adf6fb79464d63434fccf5e69a904eee9460/postcode_txt.txt
+
 
 
 result = df.merge(land, how='left', left_on='postcode', right_on='postcode')
