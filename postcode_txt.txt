@@ -1,4 +1,4 @@
-postcode,Bundesland
+﻿postcode,Bundesland
 "01067","Sachsen"
 "01069","Sachsen"
 "01097","Sachsen"
