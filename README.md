@@ -1,6 +1,6 @@
 ##########################################################################
 
-########  Python Script for Data Cleansing of E.ON Signup data  ##########
+#  Python Script for Data Cleansing of E.ON Signup data  
 
 ###########################################################################
 
