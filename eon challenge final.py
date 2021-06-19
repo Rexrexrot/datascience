@@ -5,9 +5,9 @@ Created on  Jun 21,2021
 @author: RL
 """
 
-###########################################################
-# Cleansing Script for Data of E.ON Energie Signups      ##
-###########################################################
+############################################################
+# Cleansing Script for Data of E.ON Energie Signups      ###
+############################################################
 
 import re
 import pandas as pd
