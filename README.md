@@ -1,8 +1,8 @@
-################################################################################
+##############################################################################
 
-#  Python Script for Data Cleansing of E.ON Signup Data                ########
+#  Python Script for Data Cleansing of E.ON Signup Data                ######
 
-###############################################################################
+#############################################################################
 
 # Please use the python script (eon challenge final.py) to solve data quality issues :
 
